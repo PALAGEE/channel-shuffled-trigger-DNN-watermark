@@ -1,0 +1,33 @@
+{
+  "best_fitness": 42.402347564697266,
+  "average_fitness": 41.70053768157959,
+  "min_fitness": 40.79303741455078,
+  "best_parameter_size": 18019,
+  "best_individual": [
+    3,
+    3,
+    0,
+    2,
+    4,
+    3,
+    3,
+    2,
+    3,
+    2,
+    4,
+    1,
+    4,
+    1,
+    2,
+    1,
+    0,
+    4,
+    2,
+    4,
+    4,
+    1
+  ],
+  "dataset": "CIFAR10",
+  "history_table_path": "C:\\Users\\a7582\\OneDrive\\Desktop\\小论文\\成稿\\channel shuffled trigger DNN watermark\\models\\checkpoints\\_smoke_test\\CIFAR10\\nas\\cifar10_lora_search_history.csv",
+  "paper_title": "Defending Against Ambiguity Attacks: Secret-Key-Driven DNN Watermarking for Ownership Verification"
+}

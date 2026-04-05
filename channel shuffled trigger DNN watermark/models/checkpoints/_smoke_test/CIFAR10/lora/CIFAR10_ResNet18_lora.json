@@ -1,0 +1,36 @@
+{
+  "paper_title": "Defending Against Ambiguity Attacks: Secret-Key-Driven DNN Watermarking for Ownership Verification",
+  "dataset": "CIFAR10",
+  "mode": "lora",
+  "model_name": "ResNet18",
+  "lora_dims": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    2,
+    2,
+    3,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    0,
+    1
+  ],
+  "metrics": {
+    "clean_acc": 0.1015625,
+    "trigger_acc": 0.0,
+    "detect_acc": 0.0,
+    "loss": 139.49073791503906
+  }
+}

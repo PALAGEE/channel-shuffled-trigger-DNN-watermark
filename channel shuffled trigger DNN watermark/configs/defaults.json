@@ -1,0 +1,115 @@
+{
+  "project": {
+    "paper_title": "Defending Against Ambiguity Attacks: Secret-Key-Driven DNN Watermarking for Ownership Verification",
+    "default_dataset": "CIFAR10",
+    "seed": 0
+  },
+  "paths": {
+    "dataset_path": "./data",
+    "trained_path": "./models/checkpoints"
+  },
+  "watermark": {
+    "key": [2, 0, 0, 0, 0, 5, 2, 3],
+    "num_white_points": 16,
+    "num_mixes": 2
+  },
+  "evaluation": {
+    "verify_pairs": 10
+  },
+  "training": {
+    "batch_size": 128,
+    "ref_lr": 0.001,
+    "lora_lr": 0.001,
+    "lora_init_std": 1.0
+  },
+  "nas": {
+    "num_generations": 512,
+    "batch_size": 32,
+    "population_size": 256,
+    "gamma": 0.01,
+    "choices": [0, 1, 2, 3, 4],
+    "mutation_probability": 0.2,
+    "init_std": 1.0,
+    "seed": 0
+  },
+  "datasets": {
+    "MNIST": {
+      "data_subdir": null,
+      "image_size": 28,
+      "model_name": "ResNet18",
+      "num_classes": 10,
+      "default_lora_dims": [2, 2, 2, 2, 2, 3, 2, 2, 3, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 0, 1],
+      "training": {
+        "ref_epochs": 20,
+        "ref_milestones": [10],
+        "lora_epochs": 50,
+        "lora_steps_per_epoch": 5
+      }
+    },
+    "CIFAR10": {
+      "data_subdir": null,
+      "image_size": 32,
+      "model_name": "ResNet18",
+      "num_classes": 10,
+      "default_lora_dims": [2, 2, 2, 2, 2, 3, 2, 2, 3, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 0, 1],
+      "training": {
+        "ref_epochs": 100,
+        "ref_milestones": [25],
+        "lora_epochs": 15,
+        "lora_steps_per_epoch": 5
+      }
+    },
+    "CIFAR100": {
+      "data_subdir": null,
+      "image_size": 32,
+      "model_name": "WRN28-10",
+      "num_classes": 100,
+      "default_lora_dims": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 1, 1, 1, 0, 0, 2, 0, 1, 2, 0, 1, 2],
+      "training": {
+        "ref_epochs": 100,
+        "ref_milestones": [50],
+        "lora_epochs": 50,
+        "lora_steps_per_epoch": 5
+      }
+    },
+    "FOOD101": {
+      "data_subdir": "food-101",
+      "image_size": 224,
+      "model_name": "EfficientNet-B0",
+      "num_classes": 101,
+      "default_lora_dims": [2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 1, 2, 2, 1, 2, 1],
+      "training": {
+        "ref_epochs": 100,
+        "ref_milestones": [50],
+        "lora_epochs": 50,
+        "lora_steps_per_epoch": 5
+      }
+    },
+    "Caltech101": {
+      "data_subdir": "caltech-101",
+      "image_size": 224,
+      "model_name": "AlexNet",
+      "num_classes": 101,
+      "default_lora_dims": [2, 2, 2, 2, 2, 2, 2, 1],
+      "training": {
+        "ref_epochs": 100,
+        "ref_milestones": [50],
+        "lora_epochs": 50,
+        "lora_steps_per_epoch": 5
+      }
+    },
+    "CALTECH256": {
+      "data_subdir": "caltech-256",
+      "image_size": 224,
+      "model_name": "MobileNetV2",
+      "num_classes": 256,
+      "default_lora_dims": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 1],
+      "training": {
+        "ref_epochs": 100,
+        "ref_milestones": [50],
+        "lora_epochs": 50,
+        "lora_steps_per_epoch": 5
+      }
+    }
+  }
+}
