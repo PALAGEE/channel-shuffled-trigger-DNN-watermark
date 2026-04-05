@@ -34,7 +34,6 @@ project/
 │  ├─ lora.py
 │  ├─ trainer.py
 │  └─ trigger.py
-├─ manuscript405.pdf
 ├─ LICENSE
 └─ .gitignore
 ```
